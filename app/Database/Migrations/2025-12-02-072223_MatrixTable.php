@@ -15,19 +15,21 @@ class MatrixTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'id_alternatif' => [
-                'type' => 'INT',
-                'constraint' => 11,
+            'kode_suplier' => [
+                'type' => 'VARCHAR',
+                'constraint' => 30,
+                'null' => true
             ],
-            'id_kriteria' => [
-                'type' => 'INT',
-                'constraint' => 11,
+            'kode_kriteria' => [
+                'type' => 'VARCHAR',
+                'constraint' => 30,
+                'null' => true
             ],
             'nilai' => [
                 'type' => 'VARCHAR',
                 'constraint' => 30,
                 'null' => true
-            ],
+            ]
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('matrix');

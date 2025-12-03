@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class AlternativeTable extends Migration
+class SuplierTable extends Migration
 {
     public function up()
     {
@@ -15,22 +15,33 @@ class AlternativeTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'id_alternatif' => [
+            'kode_suplier' => [
                 'type' => 'VARCHAR',
                 'constraint' => 30,
                 'null' => true
             ],
-            'nama_produk' => [
+            'nama_suplier' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
+            'kontak_suplier' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+            ],
+            'alamat_suplier' => [
+                'type' => 'TEXT',
+            ],
+            'jenis_produk' => [
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+            ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('alternative');
+        $this->forge->createTable('supliers');
     }
 
     public function down()
     {
-        $this->forge->dropTable('alternative');
+        $this->forge->dropTable('supliers');
     }
 }

@@ -12,11 +12,11 @@
 <body>
 
   <div class="container mt-3 fram">
-    <h2>Alternatif</h2>
-    <p>Alternatif / Produk </p>
+    <h2>Suplier</h2>
+    <p>Suplier per Jenis Produk </p>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <i class='fas fa-pen-alt'></i> Tambahkan Alternatif
+      <i class='fas fa-pen-alt'></i> Tambahkan Suplier
     </button>
 
 
@@ -82,25 +82,31 @@
     </div>
     <p>
 
-    <table class="table ">
+    <table class="table">
       <thead class="table-dark">
         <tr>
           <th>No</th>
           <th>Kode</th>
-          <th>Alternatif</th>
+          <th>Nama Suplier</th>
+          <th>Kontak</th>
+          <th>Alamat</th>
+          <th>Jenis Produk</th>
           <th colspan="2">Opsi</th>
         </tr>
       </thead>
       <tbody>
         <?php
         $no = 0;
-        foreach ($alternatif as $kr) :
+        foreach ($suplier as $kr) :
           $no++
         ?>
           <tr>
             <td><?= $no; ?></td>
-            <td><?= $kr['id_alternatif'] ?></td>
-            <td><?= $kr['nama_alternatif'] ?></td>
+            <td><?= $kr['kode_suplier'] ?></td>
+            <td><?= $kr['nama_suplier'] ?></td>
+            <td><?= $kr['kontak_suplier'] ?></td>
+            <td><?= $kr['alamat_suplier'] ?></td>
+            <td><?= $kr['jenis_produk'] ?></td>
             <td><a href="#" class="btn btn-info text-white"><i class='fas fa-edit text-white'></i> Edit</a></td>
             <td><a href="" class="btn btn-danger text-white"><i class='fas fa-trash-alt'></i> Hapus</a></td>
           </tr>

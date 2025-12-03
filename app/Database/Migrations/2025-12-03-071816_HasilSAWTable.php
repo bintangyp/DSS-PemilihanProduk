@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class ProductsTable extends Migration
+class HasilSAWTable extends Migration
 {
     public function up()
     {
@@ -15,23 +15,30 @@ class ProductsTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'id_alternatif' => [
+            'id_suplier' => [
+                'type' => 'INT',
+                'constraint' => 11,
+            ],
+            'jenis_produk' => [
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+            ],
+            'nilai_akhir' => [
                 'type' => 'VARCHAR',
                 'constraint' => 30,
                 'null' => true
             ],
-            'nama_produk' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
-            ],
+            'ranking' => [
+                'type' => 'INT',
+                'constraint' => 11,
+            ]
         ]);
-
         $this->forge->addKey('id', true);
-        $this->forge->createTable('products');
+        $this->forge->createTable('hasil_saw');
     }
 
     public function down()
     {
-        //
+        $this->forge->dropTable('hasil_saw');
     }
 }

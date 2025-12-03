@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>SPK-Pemilihan Suplier</title>
   <base href="<?php echo base_url('assets') ?>/">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -74,7 +74,7 @@
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">SPK</span>
+        <span class="brand-text font-weight-light">SPK Suplier</span>
       </a>
 
       <!-- Sidebar -->
@@ -125,9 +125,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/alternatif" class="nav-link ps-5 <?= set_active('alternatif', 1) ?> ">
+                  <a href="/suplier" class="nav-link ps-5 <?= set_active('suplier', 1) ?> ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Alternatif</p>
+                    <p>Suplier</p>
                   </a>
                 </li>
 

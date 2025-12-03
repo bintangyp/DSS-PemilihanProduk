@@ -7,4 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::halamanadmin');
 $routes->get('/kriteria', 'Home::kriteria');
-$routes->get('/alternatif', 'Home::alternatif');
+$routes->get('/suplier', 'Home::suplier');

@@ -15,7 +15,7 @@ class KriteriaTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'id_kriteria' => [
+            'kode_kriteria' => [
                 'type' => 'VARCHAR',
                 'constraint' => 30,
                 'null' => true
@@ -24,10 +24,15 @@ class KriteriaTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
+            'jenis' => [
+                'type' => 'ENUM',
+                'constraint' => ['cost', 'benefit'],
+            ],
             'bobot' => [
                 'type' => 'INT',
                 'constraint' => 11,
-            ],
+            ]
+
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('kriteria');

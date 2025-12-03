@@ -9,7 +9,7 @@ class KriteriaModel extends Model
 {
     protected $table            = 'kriteria';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['id_kriteria', 'nama_kriteria', 'bobot'];
+    protected $allowedFields    = ['kode_kriteria', 'nama_kriteria', 'bobot', 'jenis'];
 
     public function getKriteria($id = false)
     {

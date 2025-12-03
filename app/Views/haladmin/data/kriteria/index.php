@@ -100,7 +100,7 @@
         ?>
           <tr>
             <td><?= $no; ?></td>
-            <td><?= $kr['id_kriteria'] ?></td>
+            <td><?= $kr['kode_kriteria'] ?></td>
             <td><?= $kr['nama_kriteria'] ?></td>
             <td><?= $kr['bobot'] ?></td>
             <td><a href="#" class="btn btn-info text-white"><i class='fas fa-edit text-white'></i> Edit</a></td>
