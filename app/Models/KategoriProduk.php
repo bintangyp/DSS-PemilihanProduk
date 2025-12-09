@@ -4,13 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SuplierModel extends Model
+class KategoriProduk extends Model
 {
-    protected $table            = 'supliers';
+    protected $table            = 'kategoriproduks';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['kode_suplier', 'nama_suplier', 'kontak_suplier', 'alamat_suplier'];
+    protected $allowedFields    = ['kode_kategori', 'kategori_produk'];
 
-    public function getSuplier($id = false)
+    public function getKategoriProduk($id = false)
     {
         if ($id == false) {
             return $this->findAll();

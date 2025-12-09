@@ -130,6 +130,18 @@
                     <p>Suplier</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="/kategori-produk" class="nav-link ps-5 <?= set_active('kategori-produk', 1) ?> ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kategori Produk</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/produk" class="nav-link ps-5 <?= set_active('produk', 1) ?> ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Produk</p>
+                  </a>
+                </li>
 
               </ul>
             </li>

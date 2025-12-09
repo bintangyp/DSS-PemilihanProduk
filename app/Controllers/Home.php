@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\KategoriProduk;
 use App\Models\KriteriaModel;
 use App\Models\MatrixModel;
 use App\Models\SuplierModel;
@@ -138,5 +139,45 @@ class Home extends BaseController
         echo view('haladmin/template/header');
         echo view('haladmin/data/suplier/index', $data);
         echo view('haladmin/template/footer');
+    }
+    public function produk()
+    {
+        $suplierModel = new SuplierModel();
+        $jenisProduk = $suplierModel
+            ->select('jenis_produk')
+            ->distinct()
+            ->findAll();
+        $suplier = $suplierModel->findAll();
+        echo view('haladmin/template/header');
+        echo view('haladmin/data/produk/index', [
+            'jenisProduk' => $jenisProduk,
+            'suplier' => $suplier,
+            'selectedProduk' => null
+        ]);
+        echo view('haladmin/template/footer');
+    }
+    public function kategoriProduk()
+    {
+        $kategoriProduk = new KategoriProduk();
+
+        $kategori = $kategoriProduk->findAll();
+        echo view('haladmin/template/header');
+        echo view('haladmin/data/kategori-produk/index', [
+            'kategori' => $kategori,
+        ]);
+        echo view('haladmin/template/footer');
+    }
+
+    public function updateKategori()
+    {
+        $kode     = $this->request->getPost('kode');
+        $kategori = $this->request->getPost('kategori');
+
+        $model = new KategoriProduk();
+        $model->update($kode, [
+            'kategori_produk' => $kategori
+        ]);
+
+        return "success";
     }
 }
